@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Clientes</title>
+    <title>Prestamos-Bethy</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <script src="js/lumino.glyphs.js"></script>
 
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
+    <script src="js/html5shiv.min.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
@@ -29,14 +29,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+            <a class="navbar-brand" href="#"><span>Prestamos</span>-Bethy</a>
             <ul class="user-menu">
                 <li class="dropdown pull-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Kevin Ramirez <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user">
+
+                            </use></svg>Kevin Ramirez<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Perfil</a></li>
                         <li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Configuracion</a></li>
-                        <li><a href="index.php"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Salir</a></li>
+                        <li><a href="logout.php"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Salir</a></li>
                     </ul>
                 </li>
             </ul>
@@ -48,13 +51,18 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <form role="search">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Buscar">
         </div>
     </form>
     <ul class="nav menu">
-        <li><a href="inicio.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-        <li class="active"><a href="widgets.html"><svg class="glyph stroked male user"><use xlink:href="#stroked-male-user"></use></svg>Clientes</a></li>
-        <li><a href="charts.html"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Charts</a></li>
+        <li class="active"><a href="inicio.html"><svg class="glyph stroked dashboard-dial">
+                    <use href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
+        <li>
+            <a href="clientes.php"><svg class="glyph stroked male user">
+                    <use xlink:href="#stroked-male-user"></use></svg> Clientes</a></li>
+        <li><a href="charts.html">
+                <svg class="glyph stroked female user">
+                    <use xlink:href="#stroked-female-user"></use></svg> Garantes</a></li>
         <li><a href="tables.html"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Tables</a></li>
         <li><a href="forms.html"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Forms</a></li>
         <li><a href="panels.html"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Alerts &amp; Panels</a></li>
@@ -82,7 +90,7 @@
             </ul>
         </li>
         <li role="presentation" class="divider"></li>
-        <li><a href="login.html"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>
+        <li><a href="index.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>
     </ul>
 
 </div><!--/.sidebar-->
@@ -97,7 +105,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Widgets</h1>
+            <h1 class="page-header">Dashboard</h1>
         </div>
     </div><!--/.row-->
 
@@ -157,50 +165,62 @@
     </div><!--/.row-->
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading"><svg class="glyph stroked email"><use xlink:href="#stroked-email"></use></svg> Contact Form</div>
+                <div class="panel-heading">Site Traffic Overview</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="" method="post">
-                        <fieldset>
-                            <!-- Name input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="name">Name</label>
-                                <div class="col-md-9">
-                                    <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
-                                </div>
-                            </div>
-
-                            <!-- Email input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="email">Your E-mail</label>
-                                <div class="col-md-9">
-                                    <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
-                                </div>
-                            </div>
-
-                            <!-- Message body -->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="message">Your message</label>
-                                <div class="col-md-9">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
-                                </div>
-                            </div>
-
-                            <!-- Form actions -->
-                            <div class="form-group">
-                                <div class="col-md-12 widget-right">
-                                    <button type="submit" class="btn btn-default btn-md pull-right">Submit</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+                    <div class="canvas-wrapper">
+                        <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                    <h4>New Orders</h4>
+                    <div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                    <h4>Comments</h4>
+                    <div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                    <h4>New Users</h4>
+                    <div class="easypiechart" id="easypiechart-teal" data-percent="56" ><span class="percent">56%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                    <h4>Visitors</h4>
+                    <div class="easypiechart" id="easypiechart-red" data-percent="27" ><span class="percent">27%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-md-8">
 
             <div class="panel panel-default chat">
                 <div class="panel-heading" id="accordion"><svg class="glyph stroked two-messages"><use xlink:href="#stroked-two-messages"></use></svg> Chat</div>
-
                 <div class="panel-body">
                     <ul>
                         <li class="left clearfix">
@@ -258,13 +278,6 @@
         </div><!--/.col-->
 
         <div class="col-md-4">
-
-            <div class="panel panel-red">
-                <div class="panel-heading dark-overlay"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg>Calendar</div>
-                <div class="panel-body">
-                    <div id="calendar"></div>
-                </div>
-            </div>
 
             <div class="panel panel-blue">
                 <div class="panel-heading dark-overlay"><svg class="glyph stroked clipboard-with-paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg>To-do List</div>
@@ -351,7 +364,6 @@
         </div><!--/.col-->
     </div><!--/.row-->
 </div>	<!--/.main-->
-
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

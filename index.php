@@ -48,9 +48,8 @@ if(!isset($_SESSION['userid']))
     </form>
     <?php
 } else{
-    session_start();
     $user_id=null;
     $_SESSION["user_id"]=$user_id;
-    print "<script>window.location='inicio.html';</script>";
+    print "<script>window.location='inicio.php';</script>";
 }
 ?>

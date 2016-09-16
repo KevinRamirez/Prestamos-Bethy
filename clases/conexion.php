@@ -1,10 +1,10 @@
 <?php
-// datos para la coneccion a mysql
-define('DB_SERVER','localhost');
-define('DB_NAME','prueba-prestamo');
-define('DB_USER','root');
-define('DB_PASS','');
 
-$con = mysql_connect(DB_SERVER,DB_USER,DB_PASS);
-mysql_select_db(DB_NAME,$con);
+
+$mysqli=new mysqli("localhost","root","","dbprestamo"); //servidor, usuario de base de datos, contraseña del usuario, nombre de base de datos
+
+if(mysqli_connect_errno()){
+    echo 'Conexion Fallida : ', mysqli_connect_error();
+    exit();
+}
 ?>
